@@ -13,9 +13,11 @@ var etat = [0,0,0,0,0,0];
 // Connexion MQTT
 const mqtt = require('mqtt');
 const client = mqtt.connect('mqtt://192.168.2.15:1883');
+client.subscribe('MODULE/#');
 
 client.on('connect', function () {
     console.log("MQTT connecté !");
+    client.publish('MODULE', 'le serveur js vous dit bonjour');
 });
 
 // Gestion de connexion aux pages du site
