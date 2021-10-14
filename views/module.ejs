@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr-ca">
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+
+    <main>
+
+        <div class="jumbotron">
+            <h3>Module <%= nbr%></h3>
+
+            <h5> Le module est 
+                <% if(etat[nbr]){ %>
+                    actif
+                    <% } else { %>
+                        éteint
+                        <% } %>
+            </h5>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+
+</body>
+
+</html>

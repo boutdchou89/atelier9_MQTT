@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr-ca">
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <h2>Contrôle des modules</h2><br>
+
+            <% for (var i=1; i <=6; i++) { %>
+                <div class="row">
+                    <div class="col-md-3">
+
+                        <h5>Module <%= i%> :  
+                        <% if(etat[i]==1){ %>
+                            actif
+                            <% } else { %>
+                                éteint
+                                <% } %>
+                                    </h5><br>
+                    </div>
+
+                    <div class="col-md-2">
+        
+                        <% if(etat[i]==1){ %> 
+                            <a href="/update/<%= i%>"><button type="button" class="btn btn-outline-dark">Éteindre</button></a>
+                        <% } else { %>
+                            <a href="/update/<%= i%>"><button type="button" class="btn btn-outline-dark">Activer</button></a>
+                        <% } %>
+                    </div>
+
+                </div>
+                <% } %>
+
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand -->
+    <div class="navbar-brand">Programmation de systèmes</div>
+  
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Index</a>
+      </li>
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Modules
+        </a>
+        <div class="dropdown-menu">
+          <% for (var i=1; i <=6; i++) { %>
+            <a class="dropdown-item" href="/module/<%= i%>">Module <%= i%></a>
+            <% } %> 
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/controle">Contrôle</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/reset">Remise à 0</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
