@@ -20,7 +20,7 @@
                     <div class="col-md-3">
 
                         <h5>Module <%= i%> :  
-                        <% if(etat[i]==1){ %>
+                        <% if(etat[i-1]==1){ %>
                             actif
                             <% } else { %>
                                 éteint
@@ -30,7 +30,7 @@
 
                     <div class="col-md-2">
         
-                        <% if(etat[i]==1){ %> 
+                        <% if(etat[i-1]==1){ %> 
                             <a href="/update/<%= i%>"><button type="button" class="btn btn-outline-dark">Éteindre</button></a>
                         <% } else { %>
                             <a href="/update/<%= i%>"><button type="button" class="btn btn-outline-dark">Activer</button></a>
