@@ -19,6 +19,11 @@ client.on('connect', function () {
     console.log("MQTT connecté !");
     client.publish('MODULE', 'le serveur js vous dit bonjour');
 });
+client.on('message', function (topic, message) {
+    console.log(topic.toString());
+    console.log(message.toString());
+  });
+  
 
 // Gestion de connexion aux pages du site
 
